@@ -2,6 +2,7 @@ package com.pospiech.myrestapp.services;
 
 import com.pospiech.myrestapp.api.model.CryptoDTO;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface CryptoService {

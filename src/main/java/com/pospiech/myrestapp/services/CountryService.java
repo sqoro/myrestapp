@@ -2,6 +2,7 @@ package com.pospiech.myrestapp.services;
 
 import com.pospiech.myrestapp.api.model.CountryDTO;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface CountryService {
@@ -18,3 +19,4 @@ public interface CountryService {
 
     void deleteCountryById(Long id);
 }
+

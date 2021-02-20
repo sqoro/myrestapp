@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
+
 @Controller
 @RequestMapping("/api/crypto/")
 public class CryptoController {
@@ -50,7 +52,6 @@ public class CryptoController {
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteCryptoById(@PathVariable Long id) {
         cryptoService.deleteCryptoById(id);
-
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 }

@@ -6,10 +6,12 @@ import com.pospiech.myrestapp.api.model.CryptoDTO;
 import com.pospiech.myrestapp.domain.Crypto;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+
 public class CryptoServiceImpl implements CryptoService {
 
     CryptoRepository cryptoRepository;
@@ -60,6 +62,7 @@ public class CryptoServiceImpl implements CryptoService {
     }
 
     @Override
+    @Transactional
     public void deleteCryptoById(Long id) {
         cryptoRepository.deleteCryptoById(id);
     }
